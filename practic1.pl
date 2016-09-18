@@ -38,4 +38,3 @@ prost(X) :-
 prost(1) :- fail.
 prost_iter(I,X) :-  X**(1/2) >= I, delit(I,X).
 prost_iter(I,X) :-  X**(1/2) >= I, I1 is I + 1, prost_iter(I1,X).
- 
