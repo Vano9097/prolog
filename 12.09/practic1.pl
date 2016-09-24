@@ -35,6 +35,6 @@ nechet(X) :- \+chet(X).
 prost(X) :-
 	\+prost_iter(2,X).
 
-prost(1) :- fail.
+prost(1) :- !,fail.
 prost_iter(I,X) :-  X**(1/2) >= I, delit(I,X).
 prost_iter(I,X) :-  X**(1/2) >= I, I1 is I + 1, prost_iter(I1,X).
